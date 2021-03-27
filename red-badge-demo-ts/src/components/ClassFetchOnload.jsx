@@ -42,16 +42,18 @@ class ClassFetchOnload extends Component {
       }
 
     //do I need this? Will calling it below work by itself?
-    componentDidUpdate(prevProps, prevState) {
-        if(prevState.blogPostData !== this.state.blogPostData) {
-            this.displayBlogPosts();
-        };
-    } ;
+    // componentDidUpdate(prevProps, prevState) {
+    //     if(prevState.blogPostData !== this.state.blogPostData) {
+    //         this.displayBlogPosts();
+    //     };
+    // } ;
 
     render(){
         return (
             <div>Hello from ClassFetchOnload
-                {this.displayBlogPosts()}
+                <Container>
+                  {this.displayBlogPosts()}
+                </Container>
             </div>
         )
     };
